@@ -1,0 +1,15 @@
+Ref,Qty,Part,Value/Notes,Purpose
+U1,1,AD5941 (EVAL-AD5941BATZ for v0.1),4-wire BIA 0.1Hz-200kHz,Impedance AFE
+U2,1,ESP32-C3 module (or nRF52840),BLE 5,MCU + radio
+U3,1,TMP117,+/-0.1C I2C 0x48,Skin temperature
+U4,1,MAX30102,I2C 0x57,PPG pulse trigger
+U5,1,LIS2DW12,I2C 0x19,Motion artifact rejection
+U6,1,BQ25185,Li-ion charger,Power
+U7,1,TPS7A02 1.8V,LDO,Analog supply
+U8,1,3.3V LDO,e.g. TPS7A2033,Digital supply
+BT1,1,LiPo 3.7V 150mAh,With protection circuit,Battery (battery-only operation while on skin)
+C1-C4,4,1uF C0G/film 16V,Series DC-blocking per electrode,Block DC into tissue
+R1-R4,4,1.5k 0.1%,Series current limit per electrode,Safety
+D1-D4,4,PESD5V0 TVS,ESD protection on electrode lines,Protection
+RCAL,1,1k 0.1% 25ppm,Calibration resistor,AFE calibration
+E1-E4,4,Ag/AgCl hydrogel electrode (6mm) or snap electrode,I+ V+ V- I-,Skin interface
